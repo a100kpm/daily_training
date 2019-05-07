@@ -13,6 +13,8 @@ If the pattern is found, return the start index of its location. If not, return 
 '''
 
 #boyer moore algorithm
+#still (O(N*k)) is case like pattern= 'aaa' string = 'aaaaaaaa'
+
 
 pattern='abac'
 string='abacbaaccabaccaab'
