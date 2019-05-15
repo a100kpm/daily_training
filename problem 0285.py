@@ -15,6 +15,7 @@ Can you do this using just one forward pass through the array?
 
 
 array=[3, 7, 8, 3, 6, 1]
+array2=[3,2,8,3,6,1]
 
 def can_see_sun(array):
     cur_max=array[-1]
@@ -26,3 +27,12 @@ def can_see_sun(array):
             
     return rez
     
+
+def can_see_sun_forward(array):
+    rez=list()
+    for i in array:
+        while rez and rez[-1]<i:
+            rez.pop()
+        rez.append(i)
+        
+    return len(rez)
